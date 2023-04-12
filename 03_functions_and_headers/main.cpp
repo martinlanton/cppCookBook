@@ -1,12 +1,6 @@
 #include <iostream>
-
-double add(double a, double b) {
-    return a + b;
-}
-
-double add(double a, double b, double c) {
-    return add(add(a, b), c);
-}
+#include "functions.h" //headers must be brought in both in the file using it and in the file implementing it
+// By convention we bring in local files with double quotes, and standard or external libraries with <> signs
 
 int main() {
     double result = add(12.7, 13.2);
