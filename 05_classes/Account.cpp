@@ -1,7 +1,7 @@
 //
 // Created by MLA on 15/04/2023.
 //
-
+#include "Transaction.h"
 #include "Account.h"
 using std::vector;
 using std::string;
@@ -22,4 +22,36 @@ vector<string> Account::Report()
     }
     report.push_back("----------");
     return report;
+}
+
+bool Account::Deposit(int amount)
+{
+    if (amount >= 0)
+    {
+        balance += amount;
+        log.push_back(Transaction(amount, "Deposit"));
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+}
+
+bool Account::Withdraw(int amount)
+{
+    if (amount <=0)
+    {
+        return false;
+    }
+
+    if (balance >= amount)
+    {
+        balance -= amount;
+        log.push_back(Transaction(amount, "Withdraw"));
+        return true;
+    }
+
+    return false;
 }
