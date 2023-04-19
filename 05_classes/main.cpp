@@ -16,12 +16,12 @@ int main()
     }
 
     a1.Withdraw(50);
-    if (a1.Withdraw(100))
+    if (a1.Withdraw(110))
     {
         cout << "Second withdrawal succeeds" << std::endl;
     }
 
-    cout << "After withdrawing $50 then $100" << std::endl;
+    cout << "After withdrawing $50 then $110" << std::endl;
     for (auto s : a1.Report())
     {
         cout << s << std::endl;
