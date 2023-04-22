@@ -16,6 +16,7 @@ int main() {
     while(continueExecuting)
     {
         cout << "Enter your first number : ";
+        // The >> operator is used to pull a value from a stream, in this case the console input
         cin >> firstNumber;
         cout << "Enter your second number : ";
         cin >> secondNumber;
