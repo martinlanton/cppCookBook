@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using std::string;
+using std::vector;
+using std::to_string;
 
 
 int main() {
@@ -8,6 +11,7 @@ int main() {
     string firstPhrase;
     string secondPhrase;
 
+    vector<int> lengths;
     std::cout << "Enter the first phrase : " << std::endl;
     // The std::getline function allows us to pull all the words typed in the stream passed as first
     // argument (in this case std::cin, the console input) and put them in the second argument, this
@@ -18,9 +22,11 @@ int main() {
     std::getline(std::cin, secondPhrase);
     int firstLength = firstPhrase.length();
     int secondLength = secondPhrase.length();
+    lengths.emplace_back(firstLength);
+    lengths.emplace_back(secondLength);
 
     if (firstLength == secondLength){
-        std::cout << "Both phrases are the same length." << std::endl;
+        std::cout << "Both lengths are the same length." << std::endl;
         return 0;
     }
     if (firstLength > secondLength){
@@ -29,5 +35,16 @@ int main() {
     else {
         std::cout << "The first phrase is shorter than the second";
     }
+
+    std::cout << "The lengths have respective lengths : " << std::endl;
+    // For loops over a collection take the following form, where we declare in parentheses the type
+    // to which to cast each value, the variable name to use, followed by a colon and then the name
+    // of the collection variable to use.
+    for (int i : lengths)
+    {
+        std::cout << to_string(i) << std::endl;
+    }
+
+
     return 0;
 }
