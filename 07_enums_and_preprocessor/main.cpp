@@ -1,3 +1,6 @@
+// All statements starting with # are preprocessor statements, to be handled at the beginning of the
+// compilation, include for example essentially pastes the content of the file included in the
+// current file.
 #include <iostream>
 
 // Regular enum objects do not permit twice the same enum value in different enum objects
