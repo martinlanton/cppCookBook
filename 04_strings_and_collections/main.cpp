@@ -22,6 +22,11 @@ int main() {
     std::getline(std::cin, secondPhrase);
     int firstLength = firstPhrase.length();
     int secondLength = secondPhrase.length();
+    // The emplace_back method is often preferable to push_back when using vectors, because it
+    // avoids creating a temporary object. The method push_back on the other hand does create a
+    // temporary object (a copy?? need to check that). On strings however, there would be no benefit
+    // to using an emplace_back method because there is no object creation, therefore the string
+    // class only has a push_back method.
     lengths.emplace_back(firstLength);
     lengths.emplace_back(secondLength);
 
