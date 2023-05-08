@@ -38,7 +38,7 @@ int main() {
         cin >> x;
     }
 
-    // Immediate if is a ternary operator, essentially acts as an if/else statement to assign a
+    // "Immediate if" is a ternary operator, essentially acts as an if/else statement to assign a
     // value
     int result = something? 7 : 302;
     // This is equivalent to
