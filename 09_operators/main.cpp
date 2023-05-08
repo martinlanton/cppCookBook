@@ -1,4 +1,25 @@
 #include <iostream>
+# include "Person.h"
+
+using std::cout;
+
+
+bool IsPrime(int x)
+{
+    bool prime = true;
+    // For each number from 2 to until i more than x/i
+    for (int i = 2; i <= x/i; i = i+1)
+    {
+        int factor = x/i;
+        if (factor*i == x)
+        {
+            prime = false;
+            break;
+        }
+    }
+    return prime;
+}
+
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -58,22 +79,29 @@ int main() {
     // << to shift all the bits left
     // >> to shift all the bits right
     // Those operators are often overloaded in order to simplify the syntax (like when using cout)
-    return 0;
-}
 
-
-bool IsPrime(int x)
-{
-    bool prime = true;
-    // For each number from 2 to until i more than x/i
-    for (int i = 2; i <= x/i; i = i+1)
+    // Operator overloading
+    Person p1("John", "Smith", 123);
+    Person p2("Jane", "Doe", 456);
+    if (p1 < p2)
     {
-        int factor = x/i;
-        if (factor*i == x)
-        {
-            prime = false;
-            break;
-        }
+        cout << "Person 1 is less than Person 2 because " << p1.GetNumber() << " is less than " << p2.GetNumber() << "." << std::endl;
     }
-    return prime;
+    else
+    {
+        cout << "Person 1 is not less than Person 2 because " << p1.GetNumber() << " is equal to or more than " << p2.GetNumber() << "." << std::endl;
+    }
+
+    cout << "p1 is ";
+    if (!(p1 < 300))
+        cout << "not ";
+    cout << "less than 300" << std::endl;
+
+    cout << "300 is ";
+    if (!(300 < p1))
+    {
+        cout << "not ";
+    }
+    cout << "less than p1" << std::endl;
+    return 0;
 }
