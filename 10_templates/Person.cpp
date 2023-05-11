@@ -13,7 +13,7 @@ Person::Person(std::string first, std::string last, int arbitrary): firstname(fi
 
 Person::~Person()
 {
-    std::cout << "Destructing person : " << firstname << " " << lastname << std::endl;
+    std::cout << "Destructing person : " << GetName() << std::endl;
 }
 
 // overloading operator for one operation signature : comparing with another Person object
