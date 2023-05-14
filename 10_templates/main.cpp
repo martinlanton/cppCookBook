@@ -40,5 +40,12 @@ int main() {
     strings += " world";
     cout << strings.GetTotal() << endl;
 
+    // Since the template for Accum with Person uses an int as total, that means we need to
+    // initialize it with an int as well, instead of a Person
+    Accum<Person> people(0);
+    people += p1;
+    people += p2;
+    cout << people.GetTotal() << endl;
+
     return 0;
 }
