@@ -3,9 +3,6 @@
 //
 #include <string>
 
-#ifndef INC_06_CLASS_INHERITANCE_PERSON_H
-#define INC_06_CLASS_INHERITANCE_PERSON_H
-
 
 class Person {
 private:
@@ -19,6 +16,3 @@ public:
     int const getNumber() {return arbitrarynumber;}
     ~Person();
 };
-
-
-#endif //INC_06_CLASS_INHERITANCE_PERSON_H
