@@ -28,6 +28,8 @@ int main() {
     // memory leak.
     // It is generally speaking better to just design your classes in a way that avoids using the
     // free store altogether, in order to avoid having to do manual memory management.
+
+    // TODO : add part about manual memory management
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }
