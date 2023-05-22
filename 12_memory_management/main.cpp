@@ -1,5 +1,6 @@
 #include <iostream>
-#include "Resource.h"
+#include "Person.h"
+
 using std::string;
 
 int main() {
@@ -29,7 +30,17 @@ int main() {
     // It is generally speaking better to just design your classes in a way that avoids using the
     // free store altogether, in order to avoid having to do manual memory management.
 
-    // TODO : add part about manual memory management
-    std::cout << "Hello, World!" << std::endl;
+    Person john("John", "Smith", 123);
+    john.AddResource();
+    john.SetFirstName("Jane");
+    john.AddResource();
+    // The following means we create a SECOND object identical to the first one, therefore the
+    // "copy constructor" (and destructor) will be called at the appropriate times
+    Person jane = john;
+    // This also means that if we delete the resource in the destructor, we need to create it in the
+    // "copy constructor" in order to avoid the program crashing while trying to delete a resource
+    // that was never created in the first place.
+
+
     return 0;
 }
