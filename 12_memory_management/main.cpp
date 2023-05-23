@@ -41,6 +41,8 @@ int main() {
     // "copy constructor" in order to avoid the program crashing while trying to delete a resource
     // that was never created in the first place.
 
+    // TODO : create an OtherPerson class to show the example of how to use smart pointers and easy
+    //  memory management
 
     return 0;
 }
