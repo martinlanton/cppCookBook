@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using std::cout;
 using std::cin;
 
@@ -47,5 +48,21 @@ int main() {
     // else
     // {result = 302;}
     cout << result << std::endl;
+
+    std::vector<int> nums;
+    nums.emplace_back(1);
+    nums.emplace_back(2);
+    // for loops using vectors are declared with the for keyword followed by parentheses with type,
+    // name of the variable assigned, colon, name of the vector to iterate over.
+    for (int i : nums)
+    {
+        std::cout << std::to_string(i) << std::endl;
+    }
+    // Regular for loops with iteration (kind of like a while loop) are declared as follows :
+    // for keyword, parentheses, start state, end state, iteration process
+    for (int i = 1; i <= 5; ++i)
+    {
+        cout <<  i << std::endl;
+    }
     return 0;
 }
