@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Person.h"
+#include "OtherPerson.h"
 
 using std::string;
 
@@ -43,6 +44,7 @@ int main() {
 
     // TODO : create an OtherPerson class to show the example of how to use smart pointers and easy
     //  memory management
+    OtherPerson bob("Bob", "Dylan", 567);
 
     return 0;
 }
