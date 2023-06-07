@@ -1,6 +1,7 @@
 //
 // Created by lanto on 2023-05-19.
 //
+#pragma once
 #include <string>
 
 

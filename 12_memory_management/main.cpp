@@ -42,9 +42,14 @@ int main() {
     // "copy constructor" in order to avoid the program crashing while trying to delete a resource
     // that was never created in the first place.
 
-    // TODO : create an OtherPerson class to show the example of how to use smart pointers and easy
-    //  memory management
-    OtherPerson bob("Bob", "Dylan", 567);
+    // Adding an extra set of braces to trigger the clean up and see it properly when running, not
+    // necessary in real code
+    {
+        OtherPerson bob("Bob", "Dylan", 567);
+        bob.AddResource();
+        string s1 = bob.GetResourceName();
+        bob.AddResource();
+    }
 
     return 0;
 }
