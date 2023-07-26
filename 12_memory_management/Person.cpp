@@ -41,6 +41,7 @@ void Person::AddResource()
     // Resource object, and that means we no longer have a mean to delete the old Resource object.
     // We just created a memory leak.
     delete pResource;
+    // TODO : Need to figure out in which kind of cases one would ever need a call to "new" to create an object on the heap
     pResource = new Resource("Resource for " + GetName());
     std::cout << "Constructing resource for person : " << first << " " << last << std::endl;
 }
